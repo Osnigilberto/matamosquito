@@ -1,0 +1,149 @@
+html {
+	cursor: url(imagens/mata_mosquito.png) 30 30 , auto;
+}
+
+/*body {
+background-image: url(imagens/bg.jpg);
+background-repeat: no-repeat;
+background-size: 100%;
+
+} */
+
+body {
+    background-image: url('imagens/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Garante que o fundo cubra a tela */
+    background-position: center; /* Mantém a imagem centralizada */
+    min-height: 100vh; /* Garante que a altura do corpo preencha a tela */
+}
+
+.container {
+    height: 100vh; /* 100% da altura da viewport */
+}
+
+/* Melhor ajuste das imagens e botões */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+select, button {
+    width: 100%;
+    max-width: 300px; /* Limitar o tamanho dos campos e botões */
+}
+
+
+
+/*.mosquito1 {
+	width:  50px;
+	height: 50px;
+}
+.mosquito2 {
+	width:  70px;
+	height: 70px;
+}
+.mosquito3 {
+	width:  100px;
+	height: 100px;
+} */
+
+.mosquito1 {
+    width: 8vw; /* Ajustado para unidade relativa */
+    height: 8vw;
+}
+
+.mosquito2 {
+    width: 10vw;
+    height: 10vw;
+}
+
+.mosquito3 {
+    width: 12vw;
+    height: 12vw;
+}
+
+
+/* Alinhamento das vidas */
+.vidas-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    gap: 10px; /* Espaçamento entre as vidas */
+    margin-bottom: 20px; /* Espaço abaixo do painel */
+}
+
+.vida {
+    width: 5vw; /* Usar unidade relativa para que as vidas sejam redimensionadas em telas pequenas */
+    height: auto;
+}
+
+
+.ladoA {
+	transform: scaleX(1);
+}
+.ladoB {
+	transform: scaleX(-1);
+}
+
+/* Estilo para o painel que contém as vidas e o cronômetro */
+.paniel {
+	position: absolute;
+	width: 190px;
+	padding: 10px;
+	left: 0px;
+	bottom: 0px;
+	border-top:solid 1px #fff;
+	background-color: #fff;
+	opacity: 0.7;
+    display: flex;
+    justify-content: space-between; /* Espaça uniformemente os itens no painel */
+    align-items: center; /* Alinha os itens verticalmente */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
+}
+
+/* Estilo para as imagens das vidas */
+.vida img {
+    width: 30px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+/* Estilo para a área de vidas */
+.vida {
+	 /*float: left; */
+    display: flex; /* Alinha as vidas horizontalmente */
+    gap: 10px; /* Espaçamento entre as imagens das vidas */
+}
+
+/* Estilo para o cronômetro */
+.cronometro {
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
+    text-align: center; /* Centraliza o texto dentro do container do cronômetro */
+    white-space: nowrap; /* Impede quebra de linha no texto do cronômetro */
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-size: cover; /* Certifique-se de que o background se ajusta em telas pequenas */
+         background-attachment: fixed; /* Fixa o fundo na tela */
+    }
+
+    .btn-lg {
+        font-size: 1.2em; /* Diminuir o tamanho dos botões em dispositivos menores */
+    }
+
+    .vida {
+        width: 8vw; /* Ajusta o tamanho dos corações */
+    }
+
+    .cronometro {
+        font-size: 1.5em; /* Ajustar o cronômetro para ser mais legível */
+    }
+
+    select {
+        font-size: 1.2em; /* Aumentar o tamanho do seletor em telas pequenas */
+    }
+    
+}
+
